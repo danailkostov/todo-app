@@ -1,10 +1,12 @@
-import { Input } from "@mui/material";
-import useTodosStore from "../../zustand/useTodosStore";
-import useDebounce from "../../hooks/useDebounce";
 import { useEffect, useState } from "react";
-import { ColorPickerProps } from "./ColorPicker.types";
+import { Input } from "@mui/material";
 
-const ColorPicker = ({ id, color = "#000000" }: ColorPickerProps) => {
+import { useDebounce } from "@hooks/index";
+import { ColorPickerProps } from "types";
+
+import useTodosStore from "../../zustand/useTodosStore";
+
+const ColorPicker = ({ id, color = "#FFFFFF" }: ColorPickerProps) => {
   const [newColor, setNewColor] = useState(color);
   const debouncedColor = useDebounce(newColor, 300);
   const updateColor = useTodosStore((state) => state.updateColor);

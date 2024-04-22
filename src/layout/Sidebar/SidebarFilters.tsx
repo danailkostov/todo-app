@@ -1,5 +1,7 @@
 import { List } from "@mui/material";
+
 import SidebarItem from "./SidebarItem";
+
 import useTodosStore from "../../zustand/useTodosStore";
 
 const SidebarFilters = () => {

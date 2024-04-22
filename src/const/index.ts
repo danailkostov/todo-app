@@ -4,3 +4,8 @@ export enum SidebarActions {
   RemoveAllTodos = "Remove all todos",
   AddTodo = "Add a todo",
 }
+export enum FilterTypes {
+  Color = "color",
+  Unresolved = "unresolved",
+  Resolved = "resolved",
+}

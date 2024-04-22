@@ -1,5 +1,5 @@
 import { ListItem, ListItemButton, ListItemText } from "@mui/material";
-import { SidebarItemProps } from "../SidebarItem.types";
+import { SidebarItemProps } from "types";
 
 const SidebarItem = ({ value, onClick, bgColor }: SidebarItemProps) => {
   return (

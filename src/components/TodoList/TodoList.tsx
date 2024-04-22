@@ -1,11 +1,10 @@
-import { Box } from "@mui/material";
-import useTodos from "../../hooks/useTodos/useTodos";
-import TodoItem from "../TodoItem/TodoItem";
-import AddTask from "../AddTask/AddTask";
-import LoadingSkeleton from "../LoadingSkeleton/LoadingSkeleton";
+import { Box, Button } from "@mui/material";
+
+import { useTodos } from "@hooks/index";
+import { TodoItem, AddTask, LoadingSkeleton } from "@components/index";
 
 const TodoList = () => {
-  const { error, isLoading, activeTodos } = useTodos();
+  const { error, isLoading, activeTodos, setReloadProducts } = useTodos();
 
   if (isLoading) {
     return <LoadingSkeleton />;
@@ -23,6 +22,7 @@ const TodoList = () => {
         textAlign: "left",
       }}
     >
+      <Button onClick={() => setReloadProducts(true)}>Reload Products</Button>
       {activeTodos.map((todo) => (
         <TodoItem todo={todo} key={todo.id} />
       ))}

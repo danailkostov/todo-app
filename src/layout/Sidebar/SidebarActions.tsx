@@ -1,7 +1,9 @@
 import { List } from "@mui/material";
+
+import { getSidebarAction } from "@utils/index";
+import { SidebarActions as Actions } from "../../const/index";
+
 import SidebarItem from "./SidebarItem";
-import { getSidebarAction } from "../../utils/getSidebarAction/getSidebarAction";
-import { SidebarActions as Actions } from "./constants";
 
 const SidebarActions = () => {
   return (

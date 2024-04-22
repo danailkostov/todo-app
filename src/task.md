@@ -32,3 +32,6 @@ Technical requirements:
 4. Use reactive values to update the interface.
 5. Style either custom or by incorporating elements from flat design like https://material.io/design.
 6. Split the code using self contained components.
+
+// 1e1e1e
+// 262626

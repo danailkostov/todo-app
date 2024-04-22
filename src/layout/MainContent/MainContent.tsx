@@ -1,5 +1,6 @@
 import { Container } from "@mui/material";
-import TodoList from "../../components/TodoList/TodoList";
+
+import { TodoList } from "@components/index";
 
 const MainContent = () => {
   return (

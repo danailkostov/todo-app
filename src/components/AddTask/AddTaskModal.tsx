@@ -1,8 +1,10 @@
 import { Button, Modal, Paper, Stack, TextField } from "@mui/material";
-import useTodosStore from "../../zustand/useTodosStore";
-import { Todo } from "../../hooks/useTodos/useTodos.types";
 import { useState } from "react";
 import { useShallow } from "zustand/react/shallow";
+
+import { Todo } from "types";
+
+import useTodosStore from "../../zustand/useTodosStore";
 
 const AddTaskModal = () => {
   const [taskTitle, setTaskTitle] = useState("");

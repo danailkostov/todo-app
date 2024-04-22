@@ -1,18 +1,15 @@
-import { SidebarActions } from "../../layout/Sidebar/constants";
+import { SidebarActions } from "../../const/index";
 import useTodosStore from "../../zustand/useTodosStore";
-
-const { removeAllTasks, resolveAllTasks, unresolveAllTasks, toggleAddTask } =
-  useTodosStore.getState();
 
 export const getSidebarAction = (action: string) => {
   switch (action) {
     case SidebarActions.AllResolved:
-      return resolveAllTasks();
+      return useTodosStore.getState().resolveAllTasks();
     case SidebarActions.AllUnresolved:
-      return unresolveAllTasks();
+      return useTodosStore.getState().unresolveAllTasks();
     case SidebarActions.RemoveAllTodos:
-      return removeAllTasks();
+      return useTodosStore.getState().removeAllTasks();
     case SidebarActions.AddTodo:
-      return toggleAddTask();
+      return useTodosStore.getState().toggleAddTask();
   }
 };

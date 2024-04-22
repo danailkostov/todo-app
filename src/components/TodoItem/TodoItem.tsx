@@ -5,10 +5,12 @@ import {
   IconButton,
   Stack,
 } from "@mui/material";
-import { TodoItemProps } from "./TodoItem.types";
 import DeleteIcon from "@mui/icons-material/Delete";
+
+import { ColorPicker } from "@components/index";
+import { TodoItemProps } from "types";
+
 import useTodosStore from "../../zustand/useTodosStore";
-import ColorPicker from "../ColorPicker/ColorPicker";
 
 const TodoItem = ({ todo }: TodoItemProps) => {
   const removeItem = useTodosStore((state) => state.removeTask);
@@ -25,7 +27,7 @@ const TodoItem = ({ todo }: TodoItemProps) => {
       >
         <FormControlLabel
           sx={{
-            color: todo.color || "#000000",
+            color: todo.color || "#FFFFFF",
           }}
           control={
             <Checkbox
